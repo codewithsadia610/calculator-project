@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8edf5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    background: #172033;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.display {
+    width: 100%;
+    min-width: 0;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 15px 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#expression {
+    width: 100%;
+    min-height: 28px;
+    color: #64748b;
+    font-size: 20px;
+    text-align: right;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 8px;
+}
+
+#expression::-webkit-scrollbar {
+    display: none;
+}
+
+#result {
+    width: 100%;
+    min-height: 42px;
+    color: #111827;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+#result::-webkit-scrollbar {
+    display: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+button {
+    min-width: 0;
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #e2e8f0;
+    color: #172033;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+.clear {
+    background: #ef4444;
+    color: white;
+}
+
+.delete {
+    background: #f59e0b;
+    color: white;
+    font-size: 15px;
+}
+
+.operator {
+    background: #2563eb;
+    color: white;
+}
+
+.equal {
+    background: #16a34a;
+    color: white;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        padding: 14px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    button {
+        height: 52px;
+        font-size: 18px;
+    }
+
+    #result {
+        font-size: 28px;
+    }
+}
